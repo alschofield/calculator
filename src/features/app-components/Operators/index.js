@@ -3,13 +3,13 @@ import { connect } from 'react-redux';
 import { Container, Button } from '../../components';
 import { calculatorSlice } from '../Calculator/Calculator.slice';
 
-const Operators = ({ theme, add, subtract, multiply, divide }) => {
+const Operators = ({ theme, placeholder, add, subtract, multiply, divide, evaluate }) => {
   return (
     <Container theme={theme.container} data-testid='operators-container'>
       {
-        ['+', '-', '*', '/'].map((item) => (
+        ['+', '-', '*', '/', '='].map((item) => (
           <Button key={item} theme={theme.button} onClick={(e) => {
-            console.log(item)
+            evaluate()
             switch(item){
               case '+':
                 add()
@@ -42,7 +42,8 @@ const mapDispatchToProps = (dispatch) => {
     add: () => dispatch(calculatorSlice.actions.add()),
     subtract: () => dispatch(calculatorSlice.actions.subtract()),
     multiply: () => dispatch(calculatorSlice.actions.multiply()),
-    divide: () => dispatch(calculatorSlice.actions.divide())
+    divide: () => dispatch(calculatorSlice.actions.divide()),
+    evaluate: () => dispatch(calculatorSlice.actions.evaluate())
   }
 }
 

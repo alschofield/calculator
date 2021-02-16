@@ -4,7 +4,8 @@ export const calculatorSlice = createSlice({
   name: 'calculator',
   initialState: {
     value: 0,
-    placeholder: 0
+    placeholder: 0,
+    operator: ''
   },
   reducers: {
     clear:(state) => {
@@ -12,20 +13,42 @@ export const calculatorSlice = createSlice({
       state.placeholder = 0
     },
     add: (state) => {
-      state.value = (state.value + state.placeholder)
-      state.placeholder = 0
+      state.operator = '+'
     },
     subtract: (state) => {
-      state.value = (state.value - state.placeholder)
-      state.placeholder = 0
+      state.operator = '-'
     },
     multiply: (state) => {
-      state.value = (state.value * state.placeholder)
-      state.placeholder = 0
+      state.operator = '*'
     },
     divide: (state) => {
-      state.value = (state.value / state.placeholder)
-      state.placeholder = 0
+      state.operator = '/'
+    },
+    evaluate: (state) => {
+      switch(state.operator) {
+        case '+':
+          state.value = (state.value + state.placeholder)
+          state.placeholder = 0
+          break
+        case '-':
+          state.value = (state.value - state.placeholder)
+          state.placeholder = 0
+          break
+        case '*':
+          state.value = (state.value * state.placeholder)
+          state.placeholder = 0
+          break
+        case '/':
+          state.value = (state.value / state.placeholder)
+          state.placeholder = 0
+          break
+        case '':
+          state.value = state.placeholder
+          state.placeholder = 0
+          break
+        default:
+          break
+      }
     },
     updatePlaceholder: (state, action) => {
       state.placeholder = parseInt(state.placeholder + action.payload)
