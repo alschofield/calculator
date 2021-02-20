@@ -1,4 +1,4 @@
 # goal
 - create a basic calculator to get better with react
 
-url: https://git.heroku.com/enigmatic-fjord-59171.git
+url: https://calculator-3fxewc5l0.vercel.app/
