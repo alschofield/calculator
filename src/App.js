@@ -11,7 +11,7 @@ import Home from './features/pages/home/Home';
 import './App.css';
 import { ThemeProvider, themes } from './themes';
 
-const App = ({}) => {
+const App = () => {
   let [state, updateState] = useState({
     themeName: 'dark',
     theme: themes.dark
