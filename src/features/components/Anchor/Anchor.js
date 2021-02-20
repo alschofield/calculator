@@ -31,6 +31,8 @@ const Item = styled.a`
   background-size: ${props => props.theme.backgroundSize || 'initial'};
   background-repeat: ${props => props.theme.backgroundRepeat || 'initial'};
   color: ${props => props.theme.color || 'initial'};
+  text-decoration: ${props => props.theme.textDecoration || 'initial'};
+  line-height: ${props => props.theme.lineHeight || 'initial'};
 `;
 
 export default function Anchor(props) {
