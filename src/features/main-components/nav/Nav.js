@@ -11,6 +11,7 @@ const Nav = ({theme, handleThemeToggle }) => {
         <NavItem theme={{ ...theme.nav.item, ...theme.nav.link }} type="anchor" value="Song Rec" href="https://song-recommendations.alschofield.vercel.app/" />
         <NavItem theme={{ ...theme.nav.item, ...theme.nav.link }} type="anchor" value="Calculator" href="/" />
         <NavItem theme={{ ...theme.nav.item, ...theme.nav.link }} type="anchor" value="Todos App" href="https://todolist-app.alschofield.vercel.app/" />
+        <NavItem theme={{ ...theme.nav.item, ...theme.nav.link }} type="anchor" value="Questions?" href="https://questions.alschofield.vercel.app/" />
       </Container>
       <NavItem theme={theme.nav.item} type='icon' icon='paint' onClick={handleThemeToggle} />
     </Container>
