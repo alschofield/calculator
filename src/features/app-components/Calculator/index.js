@@ -20,8 +20,6 @@ const Calculator = ({ theme, value, placeholder }) => {
 }
 
 const mapStateToProps = (state) => {
-  console.log(state.calculator)
-
   return ({
     value: state.calculator.value,
     placeholder: state.calculator.placeholder
