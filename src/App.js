@@ -4,7 +4,7 @@ import {
   Switch,
   Route
 } from "react-router-dom";
-import { Footer, Nav } from 'schofield-main-components';
+import { Footer, SchoNav as Nav } from 'schofield-main-components';
 import { Container } from 'schofield-common-components';
 import Home from './features/pages/home/Home';
 import './App.css';
