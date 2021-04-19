@@ -1,8 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { Container } from '../../components';
+import { Container } from 'schofield-common-components';
 import { Calculator } from '../../app-components';
-import { withTheme } from '../../../themes';
+import { withTheme } from 'schofield-themes';
 
 const Home = ({ theme, todos, get, add }) => {
   return (

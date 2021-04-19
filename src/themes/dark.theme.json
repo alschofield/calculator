@@ -1,40 +1,4 @@
 {
-  "nav": {
-    "container": {
-      "position": "fixed",
-      "display": "flex",
-      "backgroundColor": "#111111",
-      "width": "100%",
-      "height": "40px",
-      "top": "0px",
-      "left": "0px",
-      "zIndex": "1",
-      "alignItems": "center"
-    },
-    "linksContainer": {
-      "display": "flex",
-      "height": "40px",
-      "width": "100%",
-      "paddingLeft": "5px"
-    },
-    "item": {
-      "height": "35px",
-      "color": "#F8F4EC"
-    },
-    "link": {
-      "textDecoration": "none",
-      "lineHeight": "38px",
-      "paddingRight": "5px",
-      "paddingLeft": "5px",
-      "cursor": "pointer"
-    },
-    "icon": {
-      "height": "30px",
-      "width": "30px",
-      "marginLeft": "2.5px",
-      "minWidth": "30px"
-    }
-  },
   "home": {
     "container": {
       "display": "flex",
@@ -103,16 +67,6 @@
           "cursor": "pointer"
         }
       }
-    }
-  },
-  "footer": {
-    "container": {
-      "display": "flex",
-      "height": "60px",
-      "backgroundColor": "#444444",
-      "color": "#F8F4EC",
-      "justifyContent": "center",
-      "alignItems": "center"
     }
   }
 }

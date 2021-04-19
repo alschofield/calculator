@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { Container, Button } from '../../components';
+import { Container, Button } from 'schofield-common-components';
 import { calculatorSlice } from '../Calculator/Calculator.slice';
 
 const Operators = ({ theme, placeholder, add, subtract, multiply, divide, evaluate }) => {

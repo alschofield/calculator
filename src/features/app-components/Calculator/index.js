@@ -1,13 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { Container, Input } from '../../components';
+import { Container, Input } from 'schofield-common-components';
 import { NumPad, Operators } from '../../app-components';
 
 const Calculator = ({ theme, value, placeholder }) => {
-  console.log(value)
-  console.log(placeholder)
-  console.log((placeholder) ? placeholder : value)
-
   return (
     <Container theme={theme.container} data-testid='calculator-container'>
       <Input theme={theme.input} type='text'  value={ (placeholder) ? placeholder : value } />

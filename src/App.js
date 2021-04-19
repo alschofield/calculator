@@ -4,22 +4,24 @@ import {
   Switch,
   Route
 } from "react-router-dom";
-import Footer from './features/main-components/footer/Footer';
-import Nav from './features/main-components/nav/Nav';
-import Container from './features/components/Container/Container';
+import { Footer, Nav } from 'schofield-main-components';
+import { Container } from 'schofield-common-components';
 import Home from './features/pages/home/Home';
 import './App.css';
-import { ThemeProvider, themes } from './themes';
+import { ThemeProvider, themes } from 'schofield-themes';
+import { themes as calcThemes } from './themes';
+
+const TITLE = 'Calculator';
 
 const App = () => {
   let [state, updateState] = useState({
     themeName: 'dark',
-    theme: themes.dark
+    theme: { ...themes.dark, ...calcThemes.dark }
   })
 
   const handleThemeToggle = () => {
     const name = (state.themeName === 'light') ? 'dark' : 'light';
-    updateState({ theme: themes[name], themeName: name });
+    updateState({ theme: { ...themes[name], ...calcThemes[name] }, themeName: name });
   };
 
   return (
@@ -34,7 +36,7 @@ const App = () => {
             </Route>
           </Switch>
 
-          <Footer />
+          <Footer text={TITLE} />
         </Container>
       </ThemeProvider>
     </Router>
