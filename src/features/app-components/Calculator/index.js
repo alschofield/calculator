@@ -6,7 +6,7 @@ import { NumPad, Operators } from '../../app-components';
 const Calculator = ({ theme, value, placeholder }) => {
   return (
     <Container theme={theme.container} data-testid='calculator-container'>
-      <Input theme={theme.input} type='text'  value={ (placeholder) ? placeholder : value } />
+      <Input theme={theme.input} data-testid='calculator-input' type='text' readOnly value={ (placeholder) ? placeholder : value } />
       <Container theme={theme.body}>
         <NumPad theme={theme.numpad} value={placeholder} />
         <Operators theme={theme.operators} value={placeholder} />

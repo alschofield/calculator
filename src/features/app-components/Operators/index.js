@@ -3,12 +3,12 @@ import { connect } from 'react-redux';
 import { Container, Button } from 'schofield-common-components';
 import { calculatorSlice } from '../Calculator/Calculator.slice';
 
-const Operators = ({ theme, placeholder, add, subtract, multiply, divide, evaluate }) => {
+const Operators = ({ theme, placeholder, add, subtract, multiply, divide, equals, evaluate }) => {
   return (
     <Container theme={theme.container} data-testid='operators-container'>
       {
         ['+', '-', '*', '/', '='].map((item) => (
-          <Button key={item} theme={theme.button} onClick={(e) => {
+          <Button key={item} data-testid={`operator-${item}`} theme={theme.button} onClick={(e) => {
             evaluate()
             switch(item){
               case '+':
@@ -22,6 +22,9 @@ const Operators = ({ theme, placeholder, add, subtract, multiply, divide, evalua
                 break
               case '/':
                 divide()
+                break
+              case '=':
+                equals()
                 break
               default:
                 break
@@ -43,6 +46,7 @@ const mapDispatchToProps = (dispatch) => {
     subtract: () => dispatch(calculatorSlice.actions.subtract()),
     multiply: () => dispatch(calculatorSlice.actions.multiply()),
     divide: () => dispatch(calculatorSlice.actions.divide()),
+    equals: () => dispatch(calculatorSlice.actions.equals()),
     evaluate: () => dispatch(calculatorSlice.actions.evaluate())
   }
 }

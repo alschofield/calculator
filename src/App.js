@@ -4,6 +4,8 @@ import {
   Switch,
   Route
 } from "react-router-dom";
+import { Provider } from 'react-redux';
+import store from './redux/store';
 import { Footer, SchoNav as Nav } from 'schofield-main-components';
 import { Container } from 'schofield-common-components';
 import Home from './features/pages/home/Home';
@@ -26,19 +28,21 @@ const App = () => {
 
   return (
     <Router>
-      <ThemeProvider theme={state.theme}>
-        <Container data-testid="app-container">
-          <Nav handleThemeToggle={handleThemeToggle} />
+      <Provider store={store}>
+        <ThemeProvider theme={state.theme}>
+          <Container data-testid="app-container">
+            <Nav handleThemeToggle={handleThemeToggle} />
 
-          <Switch>
-            <Route path="/">
-              <Home />
-            </Route>
-          </Switch>
+            <Switch>
+              <Route path="/">
+                <Home />
+              </Route>
+            </Switch>
 
-          <Footer text={TITLE} />
-        </Container>
-      </ThemeProvider>
+            <Footer text={TITLE} />
+          </Container>
+        </ThemeProvider>
+      </Provider>
     </Router>
   );
 }

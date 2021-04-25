@@ -4,7 +4,7 @@ import { Container } from 'schofield-common-components';
 import { Calculator } from '../../app-components';
 import { withTheme } from 'schofield-themes';
 
-const Home = ({ theme, todos, get, add }) => {
+const Home = ({ theme }) => {
   return (
     <Container theme={theme.home.container} data-testid='home-container'>
       <Calculator theme={theme.home.calculator} />

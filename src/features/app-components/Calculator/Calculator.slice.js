@@ -5,7 +5,7 @@ export const calculatorSlice = createSlice({
   initialState: {
     value: 0,
     placeholder: 0,
-    operator: ''
+    operator: '='
   },
   reducers: {
     clear:(state) => {
@@ -23,6 +23,9 @@ export const calculatorSlice = createSlice({
     },
     divide: (state) => {
       state.operator = '/'
+    },
+    equals: (state) => {
+      state.operator = '='
     },
     evaluate: (state) => {
       switch(state.operator) {
@@ -42,7 +45,7 @@ export const calculatorSlice = createSlice({
           state.value = (state.value / state.placeholder)
           state.placeholder = 0
           break
-        case '':
+        case '=':
           state.value = state.placeholder
           state.placeholder = 0
           break
@@ -51,7 +54,7 @@ export const calculatorSlice = createSlice({
       }
     },
     updatePlaceholder: (state, action) => {
-      state.placeholder = parseInt(state.placeholder + action.payload)
+      state.placeholder = ((action.payload === '.') ? (state.placeholder + action.payload) : parseFloat(state.placeholder + action.payload))
     }
   },
 });

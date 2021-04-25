@@ -8,10 +8,10 @@ const NumPad = ({ theme, update, clear }) => {
     <Container theme={theme.container} data-testid='numpad-container'>
       {
         ['9', '8', '7', '6', '5', '4', '3', '2', '1', '0', '.'].map((item) => (
-          <Button key={item} theme={theme.button} onClick={(e) => update(item)}>{item}</Button>
+          <Button data-testid={`numpad-${item}`} key={item} theme={theme.button} onClick={(e) => update(item)}>{item}</Button>
         ))
       }
-      <Button theme={theme.button} onClick={(e) => clear()}>C</Button>
+      <Button theme={theme.button} data-testid={`numpad-C`} onClick={(e) => clear()}>C</Button>
     </Container>
   );
 }
