@@ -17,7 +17,7 @@
     "react-scripts": "4.0.0",
     "schofield-common-components": "2.0.8",
     "schofield-main-components": "1.1.12",
-    "schofield-themes": "1.2.7"
+    "schofield-themes": "1.2.8"
   },
   "scripts": {
     "start": "react-scripts start",
