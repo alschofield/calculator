@@ -16,7 +16,6 @@
         "display": "block",
         "height": "500px",
         "width": "400px",
-        "border": "2px solid #888888",
         "backgroundColor": "#333333",
         "borderRadius": "5px",
         "paddingTop": "5px",
@@ -30,7 +29,9 @@
         "backgroundColor": "#FFFFFF",
         "textAlign": "right",
         "fontSize": "35px",
-        "paddingRight": "10px"
+        "paddingRight": "10px",
+        "paddingLeft": "0px",
+        "border": "none"
       },
       "body": {
         "display": "flex",
@@ -49,7 +50,9 @@
           "width": "33%",
           "color": "#FFFFFF",
           "fontSize": "24px",
-          "cursor": "pointer"
+          "cursor": "pointer",
+          "border": "none",
+          "backgroundColor": "#333333"
         }
       },
       "operators": {
@@ -64,7 +67,9 @@
           "height": "20%",
           "color": "#FFFFFF",
           "fontSize": "24px",
-          "cursor": "pointer"
+          "cursor": "pointer",
+          "border": "none",
+          "backgroundColor": "#333333"
         }
       }
     }
